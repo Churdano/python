@@ -15,23 +15,24 @@ def calcular_generacion():
         generacion = "Generacion Z"
     else:
         generacion = "No existe generacion asociada"
-    etiqueta_generacion.config(text=generacion)
+    etiqueta_generacion.config(text=generacion, font=("Arial", 14, "bold"), fg="#3366cc")
 
 ventana = tk.Tk()
 ventana.title("Calculadora de generación")
 
 # Crear el campo de entrada
-etiqueta_edad = tk.Label(ventana, text="Ingrese su edad:")
+etiqueta_edad = tk.Label(ventana, text="Ingrese su edad:", font=("Arial", 14))
 etiqueta_edad.pack()
-entrada_edad = tk.Entry(ventana)
+entrada_edad = tk.Entry(ventana, font=("Arial", 14))
 entrada_edad.pack()
 
 # Crear el botón de cálculo
-boton_calcular = tk.Button(ventana, text="Calcular generación", command=calcular_generacion)
+boton_calcular = tk.Button(ventana, text="Calcular generación", font=("Arial", 14), bg="#3366cc", fg="white", command=calcular_generacion)
 boton_calcular.pack()
 
 # Crear la etiqueta donde se mostrará la generación
-etiqueta_generacion = tk.Label(ventana, text="")
+etiqueta_generacion = tk.Label(ventana, text="", font=("Arial", 18))
 etiqueta_generacion.pack()
 
 ventana.mainloop()
+
